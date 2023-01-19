@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tensorflow Style Image</title>
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='css/style.css') }}" />
+   
+    
+</head>
+<body>
+    <h1>Create Style Image</h1>
+    <p>1.Select original and style images</p>
+    <p>2.Click Create Style Image</p>
+    <p>Note: Click one time Create Style Image and wait 30-45 seconds. Stylized image will be shown between horizontal lines.</p>
+    <p>To save image click right click on mouse and save image</p>
+    <div class="grp">
+    <form id="upload-form" enctype="multipart/form-data" action='/' method='post' >
+        
+      <label for="image" > original </label>
+      
+      <input type="file" id="image" name="image" >
+      
+      <label for="image2" > style </label>
+
+      <input type="file" id="image2" name="image2" >
+
+      <input type="submit" value="Create Style Image" id="btns" >
+    </form>
+  </div>
+    <h3>Stylized Image</h3>
+    <hr>
+    <div>
+    {{ stylized | safe }}
+    </div>
+    <hr>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+    <script type="module" src="{{ url_for('static',filename='js/script.js') }}"></script>
+</body>
+
+</html>

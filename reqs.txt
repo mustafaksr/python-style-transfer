@@ -1,0 +1,9 @@
+tensorflow
+tensorflow_hub
+Flask
+gunicorn
+numpy
+IPython
+Jinja2
+matplotlib
+Pillow
