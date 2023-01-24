@@ -1,7 +1,9 @@
 
-
+# Run localy
 ```bash
-cd /media/desktop/01D7E2330EB2B040/google-cloud-ml/python-style-transfer
+git clone https://github.com/mustafaksr/python-style-transfer.git
+
+cd ~/python-style-transfer
 ```
 ```bash
 virtualenv ~/style
@@ -20,7 +22,9 @@ export PORT=8080
 python3 main.py
 ```
 
+# Run Docker
 ```bash
 export PORT=8080
-docker run -p $PORT:$PORT -e PORT=$PORT tensorflow_style_transfer:latest
+docker pull mustafakeser/tensorflow_style_transfer:latest
+docker run -p $PORT:$PORT -e PORT=$PORT mustafakeser/tensorflow_style_transfer:latest
 ```
